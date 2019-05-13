@@ -6,7 +6,11 @@ Name: Kelly Hwang<br>
 SUID: 361712622<br>
 Email: kehwang@syr.edu<br>
 
-## Project Summary
+## Documents Summary
+Resume<br>
+Portfolio Proposal Written Submission<br>
+
+## Projects Summary
 Process Improvement for Account Cancellations at X Company: a Proof of Concept<br>
 Mushroom Classification<br>
 An Exploration of Yelp Restaurant Reviews<br>
