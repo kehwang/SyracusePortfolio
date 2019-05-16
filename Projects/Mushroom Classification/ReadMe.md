@@ -12,11 +12,12 @@ Programming Language: R<br>
 Data Cleansing<br>
 Data Exploration<br>
 Data Visualization<br>
-Predictive Modeling - Naive Bayes, Random Forest<br>
+Predictive Modeling - Naive Bayes, Random Forest, Support Vector Machines<br>
 
 ### Data Sources
 https://www.kaggle.com/uciml/mushroom-classification
 
 ### Contents
 - mushrooms-data.csv - original dataset
-- final_mushrooms.R - R file
+- final_mushrooms.rmd - annotated R markdown file
+- mushroom classification.pdf - presentation deck
