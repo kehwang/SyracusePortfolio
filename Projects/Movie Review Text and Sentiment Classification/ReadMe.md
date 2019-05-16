@@ -27,4 +27,5 @@ http://nlp.stanford.edu/sentiment/
 ### Contents
 - train.tsv - Training data with over 156,060 phrases
 - test.tsv - Testing data for validation
+- lexicons.zip - Sentiment lexicons for use
 - review_classification.ipynb - Annotated jupyter notebook
