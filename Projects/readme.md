@@ -1,5 +1,8 @@
 ## Project Deliverable Outline:
 
+- MBC 638 - Data Analysis and Decision Making<br>
+Process Improvement with DMAIC
+
 - IST 565 - Data Mining<br>
 Mushroom Classification
 
