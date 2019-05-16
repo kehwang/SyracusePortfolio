@@ -8,13 +8,11 @@ Email: kehwang@syr.edu<br>
 
 ## Documents Summary
 Resume<br>
-Portfolio Proposal Written Submission<br>
+Portfolio Written Submission<br>
 
 ## Projects Summary
-Process Improvement for Account Cancellations at X Company: a Proof of Concept<br>
-Mushroom Classification<br>
 An Exploration of Yelp Restaurant Reviews<br>
-Kaggle Movie Reviews Text and Sentiment Classification<br>
-Exploration of Twitter Sentiment Analysis using NLTK and TextBlob<br>
-Case Study: NCAA Coach Salary Recommendation<br>
-Case Study: Predicting Best Investment Zip Codes<br>
+Best Zip Codes for Investment<br>
+Movie Review Text and Sentiment Classification<br>
+Mushroom Classification<br>
+NCAA Coach Salary Recommendation<br>
