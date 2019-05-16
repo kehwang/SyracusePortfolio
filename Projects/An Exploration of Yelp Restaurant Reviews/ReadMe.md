@@ -2,7 +2,7 @@
 Yelp is company designed around the collection of reviews for the users of its application to be able to make informed decisions about their consumer needs. As a part of an academic data challenge, Yelp has provided a subset of our businesses, reviews, and user data. The datasets provided were in JSON format and included over 1.4 million business attributes, 188,593 businesses, and 5,996,996 reviews. The goal was to perform sentiment analysis and exploration on the dataset.
 
 ### Techniques Utilized:
-Programming Language: Python
+Programming Language: Python<br>
 Data Cleansing on Unstructured Data<br>
 Statistical Analysis<br>
 Data Visualization<br>
