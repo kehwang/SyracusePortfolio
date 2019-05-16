@@ -1,0 +1,168 @@
+---
+title: "IST 565 - Final Project"
+author: "Kelly Hwang"
+date: "September 16, 2018"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(caret)
+library(randomForest)
+library(e1071)
+library(arules)
+library(arulesViz)
+library(rminer)
+library(kernlab)
+library(klaR)
+library(cba)
+```
+
+<b>Introduction</b>
+
+Over the last 5 years, mushroom hunting has been gaining popularity with nature enthusiasts.
+Without any expensive gear or membership fees, hunters can enjoy the thrill of finding edible
+fungi relatively easily, while partaking in the great outdoors. However, it is extremely important
+for mushroom hunters to understand where to search, and what to search for. There are various
+books and guides available to educate readers on what's edible and what's not. It is of inevitable
+importance that hunters understand the difference between a poisonous and edible mushroom.
+
+I will be using the Mushroom Classification dataset found on Kaggle. This dataset was originally
+contributed to the UCI Machine Learning repository 30 years ago, and contains descriptions of
+hypothetical samples belonging to over 23 species of gilled mushrooms, specifically in the
+Agaricus and Leiota family (as cited from the Kaggle page).
+
+Each species is labeled as edible, poisonous, or unknown edibility. There is no simple rule that
+determines the edibility of a mushroom, and so I hope to build models that will be able to predict
+whether or not mushrooms are poisonous based off their features.
+
+First importing data:
+```{r}
+mushrooms <- read.csv("~/Syracuse - Grad School/IST 565 - Data Mining/mushrooms-data.csv")
+```
+
+A quick look at the data shows 23 different variables:
+```{r}
+str(mushrooms)
+```
+
+```{r}
+summary(mushrooms)
+```
+
+```{r}
+View(head(mushrooms))
+```
+
+Check for any null values in the data set:
+```{r}
+table(is.na(mushrooms))
+```
+
+Plotting all variables to see distributions:
+```{r, echo = FALSE}
+par(mfrow = c(3, 2))
+for (i in 1:23) {
+  plot(mushrooms[ ,i], main=colnames(mushrooms)[i],
+       ylab = "Count", col="darkolivegreen3", las = 0)
+}
+```
+
+All mushrooms are classified as either edible (e) or poisonous (p).
+The goal is to determine if we can classify mushrooms as e/p based on their given attributes.
+
+How many mushrooms in the data are edible vs poisonous?
+```{r}
+table(mushrooms$class)
+```
+```{r, echo = FALSE}
+edible.percent <- 4208/(4208+3916)*100
+poison.percent <- 100 - edible.percent
+cat("Percent of edible class:", edible.percent,"%")
+cat("Percent of poisonous class:", abs(poison.percent), "%")
+```
+
+Converting data from factor to numeric for models:
+```{r}
+mushrooms_data <- mushrooms[,2:23]
+mushrooms_class <- mushrooms[,1]
+mushrooms_data <- sapply(mushrooms_data, function(x) as.numeric(as.factor(x)))
+mushrooms_new <- data.frame(class = mushrooms_class, mushrooms_data)
+```
+
+Remove variable veil.type due to zero variance as shown by the distribution plot above:
+```{r}
+mushrooms_new$veil.type <- NULL
+```
+
+Split data into 70% training and 30% for testing:
+```{r}
+set.seed(0)
+sample <- sample(2, nrow(mushrooms_new), replace = TRUE, prob = c(0.7, 0.3))
+training <- mushrooms_new[sample == 1,]
+testing <- mushrooms_new[sample == 2,]
+```
+
+Checking on the dimensions of training and testing:
+```{r, echo = FALSE}
+dim(training)
+dim(testing)
+```
+
+Extract original class from testing set:
+```{r}
+testing_class <- testing[,1]
+```
+
+Remove class from testing set for modeling:
+```{r}
+testing_noclass <-testing[,2:22]
+```
+
+Building Naive Bayes model:
+```{r}
+nb_model <- naiveBayes(class ~ ., data = training, laplace = 1)
+nb_class <- predict(nb_model, newdata = testing_noclass)
+```
+
+Accuracy against original labels:
+```{r, echo = FALSE}
+confusionMatrix(testing_class, nb_class)
+```
+
+Random Forest model with 100 trees:
+```{r}
+rndf_model <- randomForest(class ~ ., data = training, ntree = 100, importance = TRUE)
+rndf_class <- predict(rndf_model, newdata = testing_noclass)
+```
+
+Variable Importance Plot for random forest:
+```{r, echo = FALSE}
+varImpPlot(rndf_model, main = "Variable Importance Plot - Random Forest")
+```
+
+Accuracy against original labels:
+```{r}
+confusionMatrix(testing_class, rndf_class)
+```
+
+KSVM model:
+```{r}
+svm_model <- ksvm(class ~ ., data = training, kernel = "polydot", kpar = list(degree = 3), cross = 3)
+svm_class <- predict(svm_model, newdata = testing_noclass)
+
+```
+
+Accuracy against original labels:
+```{r}
+confusionMatrix(testing_class, rndf_class)
+```
+
+
+End of Analysis Findings 
+
+Veil type was the same among the entire mushroom data population.
+Odor, Stalk Root, Gill Color are the most important variables.
+Naive Bayes classification model produced an outcome of 91% accuracy.
+Random Forest and SVM model produced an outcome of 100% accuracy.
