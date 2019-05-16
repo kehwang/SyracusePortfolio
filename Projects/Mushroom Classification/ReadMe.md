@@ -8,11 +8,11 @@ descriptions of hypothetical samples belonging to over 23 species of gilled mush
 specifically in the Agaricus and Leiota family (as cited from Kaggle). Each species is labeled as edible, poisonous, or unknown edidibility, and there is no simple rule that determines the edibility factor of a mushroom. The exercise was to build models that will be able to predict whether or not mushrooms are poisonous based off their features.
 
 ### Techniques Utilized
-Programming Language: R
-Data Cleansing
-Data Exploration
-Data Visualization
-Predictive Modeling - Naive Bayes, Random Forest
+Programming Language: R<br>
+Data Cleansing<br>
+Data Exploration<br>
+Data Visualization<br>
+Predictive Modeling - Naive Bayes, Random Forest<br>
 
 ### Data Sources
 https://www.kaggle.com/uciml/mushroom-classification
