@@ -7,12 +7,13 @@ This is a text classification demonstration using NLTK.
 ### Techniques Utilized
 
 Programming Language: Python<br>
-Natural Language Processing:<br>
+Natural Language Processing<br>
 - Tokenization
 - Bag of Words
 - Text Processing: removing stopwords, non alphanumeric characters, lexicon use
 - Frequency Analysis
 - Feature Building<br>
+
 Classification using:
 - Naive Bayes (NLTK)
 - Multinomial Naive Bayes (SKLearn)
