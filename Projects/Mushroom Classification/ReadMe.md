@@ -18,4 +18,5 @@ Predictive Modeling - Naive Bayes, Random Forest
 https://www.kaggle.com/uciml/mushroom-classification
 
 ### Contents
-mushrooms-data.csv - original dataset
+- mushrooms-data.csv - original dataset
+- final_mushrooms.R - R file
