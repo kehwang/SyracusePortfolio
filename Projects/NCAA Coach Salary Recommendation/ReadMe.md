@@ -11,7 +11,7 @@ Predictive Modeling with OLS Regression
 
 ### Data Sources
 http://sports.usatoday.com/ncaa/salaries<br>
-http://grfx.cstv.com/photos/schools/sdsu/genrel/auto_pdf/what-is-grad-success-rate.pd<br>
+http://grfx.cstv.com/photos/schools/sdsu/genrel/auto_pdf/what-is-grad-success-rate.pdf<br>
 http://www.ncaa.org<br>
 
 ### Contents
