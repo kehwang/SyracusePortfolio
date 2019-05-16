@@ -3,9 +3,9 @@ The highest paid college football coaches in the nation can earn millions of dol
 
 ### Techniques Utilized
 Programming Language: Python<br>
-Researching real data sources<br>
-Data cleansing and compiling<br>
-Exploratory analysis<br>
+Researching Real Data Sources<br>
+Data Cleansing and Compiling<br>
+Exploratory Analysis<br>
 Data Visualization<br>
 Predictive Modeling with OLS Regression
 
