@@ -11,6 +11,6 @@ Sentiment Analysis<br>
 https://www.yelp.com/dataset/challenge
 
 ### Contents:
-- Yelp_restaurant_reviews.zip - contains data for the project (post-cleaned version of the original dataset, which was too large for project demonstration purposes).<br>
-- datacleaning.ipynb - first notebook for the project, contains data munging and basic statistical exploration.<br>
-- sentimentanalysis&anova.ipynb - second notebook for the projects, contains sentiment analysis and one way ANOVA.
+- <b>Yelp_restaurant_reviews.zip</b> - contains data for the project (post-cleaned version of the original dataset, which was too large for project demonstration purposes).<br>
+- <b>datacleaning.ipynb</b> - first notebook for the project, contains data munging and basic statistical exploration.<br>
+- <b>sentimentanalysis&anova.ipynb</b> - second notebook for the projects, contains sentiment analysis and one way ANOVA.
