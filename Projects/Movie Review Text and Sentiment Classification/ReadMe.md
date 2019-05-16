@@ -21,7 +21,7 @@ Classification using:
 - Random Forest (SKLearn)
 
 ### Data Sources
-https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews
+https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews<br>
 http://nlp.stanford.edu/sentiment/
 
 ### Contents
