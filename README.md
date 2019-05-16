@@ -11,6 +11,7 @@ Resume<br>
 Portfolio Written Submission<br>
 
 ## Projects Summary
+Process Improvement DMAIC<br>
 An Exploration of Yelp Restaurant Reviews<br>
 Best Zip Codes for Investment<br>
 Movie Review Text and Sentiment Classification<br>
