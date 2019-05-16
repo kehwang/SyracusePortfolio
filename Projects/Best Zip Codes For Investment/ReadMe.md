@@ -4,11 +4,11 @@ Property values have been propelled to record high numbers in some parts of the 
 
 ### Techniques Utilized
 Programming Language: Python<br>
-Targetted research<br>
-Data cleansing and downsizing<br>
-Exploratory analysis<br>
-Data visualization<br>
-Time series predictive forecasting<br>
+Targetted Research<br>
+Data Cleansing and Downsizing<br>
+Exploratory Analysis<br>
+Data Visualization<br>
+Time Series Predictive Forecasting<br>
 
 ### Data Sources
 https://files.zillowstatic.com/research/public/Zip/Zip_Zhvi_SingleFamilyResidence.csv<br>
