@@ -6,7 +6,7 @@ Programming Language: Python<br>
 Data Cleansing on Unstructured Data<br>
 Statistical Analysis<br>
 Data Visualization<br>
-Sentiment Analysis<br>
+Sentiment Analysis with TextBlob<br>
 
 ### Data Sources
 https://www.yelp.com/dataset/challenge
