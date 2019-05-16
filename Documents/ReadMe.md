@@ -1,4 +1,4 @@
 # Documents
 
 Resume<br>
-Portfolio Proposal Written Submission
+Portfolio Written Submission
